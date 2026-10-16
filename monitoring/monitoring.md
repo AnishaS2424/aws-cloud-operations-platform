@@ -92,7 +92,7 @@ CloudWatch Logs
 
 ### Evidence: Nginx Access Logs
 
-![CloudWatch Nginx access logs showing application requests](../screenshots/cloudwatch_nginx_access_logs.PNG)
+![CloudWatch Nginx access logs showing application requests](monitoring/cloudwatch_nginx_access_logs.PNG)
 
 ## 4. EC2 Metrics
 
