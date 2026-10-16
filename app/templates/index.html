@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app_name }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #f5f6f8;
+        }
+
+        h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .status {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .healthy {
+            color: #16803c;
+        }
+
+        .unhealthy {
+            color: #c62828;
+        }
+
+        .metric {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .upload-card {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>{{ app_name }}</h1>
+
+    <div class="subtitle">
+        AWS infrastructure and application operations dashboard
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <div>Application</div>
+            <div class="status healthy">HEALTHY</div>
+        </div>
+
+        <div class="card">
+            <div>PostgreSQL Database</div>
+
+            {% if db_ok %}
+                <div class="status healthy">CONNECTED</div>
+            {% else %}
+                <div class="status unhealthy">UNAVAILABLE</div>
+            {% endif %}
+
+            <small>{{ db_message }}</small>
+        </div>
+
+        <div class="card">
+            <div>Amazon S3</div>
+
+            {% if s3_ok %}
+                <div class="status healthy">AVAILABLE</div>
+            {% else %}
+                <div class="status unhealthy">UNAVAILABLE</div>
+            {% endif %}
+
+            <small>{{ s3_message }}</small>
+        </div>
+
+        <div class="card">
+            <div>Total Orders</div>
+
+            <div class="metric">
+                {{ order_count if order_count is not none else "N/A" }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card upload-card">
+        <h3>Upload Document</h3>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Upload to S3</button>
+        </form>
+    </div>
+
+</body>
+</html>
