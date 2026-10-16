@@ -31,7 +31,7 @@ This established that the EC2 instance had working S3 access before the incident
 
 ### Baseline Evidence
 
-![Baseline screenshot showing all systems healthy](../../screenshots/incident_02/incident-02-baseline-all-systems-healthy.png)
+![Baseline screenshot showing all systems healthy](incident-02-baseline-all-systems-healthy.png)
 
 ## Failure Introduction
 
@@ -77,7 +77,7 @@ The application was therefore able to reach S3, but it was not authorized to per
 
 ### Failure Evidence
 
-![S3 upload failure showing AccessDenied](../../screenshots/incident_02/incident-02-failure-s3-access-denied.png)
+![S3 upload failure showing AccessDenied](incident-02-failure-s3-access-denied.png)
 
 ## Diagnosis
 
@@ -125,7 +125,7 @@ The application was attempting to operate on an object at the bucket root, while
 
 ### Diagnosis Evidence
 
-![IAM policy resource scope showing the mismatch](../../screenshots/incident_02/incident-02-diagnosis-iam-resource-scope.png)
+![IAM policy resource scope showing the mismatch](incident-02-diagnosis-iam-resource-scope.png)
 
 ## Root Cause
 
@@ -188,7 +188,7 @@ The final policy structure was:
 
 ### Resolution Evidence
 
-![IAM policy showing the restored resource scope](../../screenshots/incident_02/incident-02-resolution-iam-policy-restored.png)
+![IAM policy showing the restored resource scope](incident-02-resolution-iam-policy-restored.png)
 
 ## Verification
 
@@ -225,7 +225,7 @@ This provided an independent verification after the application-level recovery.
 
 ### Verification Evidence
 
-![S3 access successfully recovered after the IAM policy was restored](../../screenshots/incident_02/incident-02-verification-s3-access-recovered.png)
+![S3 access successfully recovered after the IAM policy was restored](incident-02-verification-s3-access-recovered.png)
 
 ## Troubleshooting Summary
 
