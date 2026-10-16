@@ -35,7 +35,7 @@ This established the known-good state before the incident.
 
 ### Baseline Evidence — All Systems Healthy
 
-![Baseline screenshot showing all systems healthy](../../screenshots/incident_01/incident-01-baseline-all-systems-healthy.png)
+![Baseline screenshot showing all systems healthy](incident-01-baseline-all-systems-healthy.png))
 
 ## Failure Introduction
 
@@ -98,7 +98,7 @@ This immediately showed an important distinction: the EC2 application process an
 
 ### Failure Evidence
 
-![Database connectivity failure showing the RDS connection timeout](../../screenshots/incident_01/incident-01-failure-database-connectivity-lost.png)
+![Database connectivity failure showing the RDS connection timeout](incident-01-failure-database-connectivity-lost.png)
 
 ## Diagnosis
 
@@ -177,7 +177,7 @@ The application itself was healthy, and the RDS instance was available. The fail
 
 ### Diagnosis Evidence
 
-![Diagnosis screenshot showing the identified root cause](../../screenshots/incident_01/incident-01-diagnosis-root-cause-identified.png)
+![Diagnosis screenshot showing the identified root cause](incident-01-diagnosis-root-cause-identified.png)
 
 ## Resolution
 
@@ -196,7 +196,7 @@ This preserves the intended least-privilege network design: the RDS security gro
 
 ### Resolution Evidence
 
-![Resolution screenshot showing the RDS security group rule restored](../../screenshots/incident_01/incident-01-resolution-rds-sg-rule-restored.png)
+![Resolution screenshot showing the RDS security group rule restored](incident-01-resolution-rds-sg-rule-restored.png)
 
 ## Verification
 
@@ -267,7 +267,7 @@ This provided the final end-to-end verification: the EC2-hosted application coul
 
 ### Verification Evidence
 
-![Verification screenshot showing the application successfully recovered and retrieving data from RDS](../../screenshots/incident_01/incident-01-verification-application-recovered.png)
+![Verification screenshot showing the application successfully recovered and retrieving data from RDS](incident-01-verification-application-recovered.png)
 
 ## Troubleshooting Summary
 
