@@ -122,15 +122,15 @@ The metrics appeared in CloudWatch with live data, confirming that the CloudWatc
 
 ### Evidence: CPU Metrics
 
-![CloudWatch EC2 CPU metrics](../screenshots/cloudwatch_cpu_metrix.PNG)
+![CloudWatch EC2 CPU metrics](monitoring/cloudwatch_cpu_metrix.PNG)
 
 ### Evidence: Memory Utilization
 
-![CloudWatch EC2 memory utilization metric](../screenshots/cloudwatch_mem_used_percent.PNG)
+![CloudWatch EC2 memory utilization metric](monitoring/cloudwatch_mem_used_percent.PNG)
 
 ### Evidence: Disk Utilization
 
-![CloudWatch EC2 root filesystem disk utilization metric](../screenshots/cloudwatch_ec2_disk_metric.PNG)
+![CloudWatch EC2 root filesystem disk utilization metric](monitoring/cloudwatch_ec2_disk_metric.PNG)
 
 ## 5. EC2 Monitoring Dashboard
 
@@ -150,7 +150,7 @@ I kept these as separate widgets so each operational signal can be viewed indepe
 
 ### Evidence: EC2 Monitoring Dashboard
 
-![CloudWatch EC2 monitoring dashboard with CPU, memory, and disk metrics](../screenshots/cloudwatch_ec2_monitoring_dashboard.PNG)
+![CloudWatch EC2 monitoring dashboard with CPU, memory, and disk metrics](monitoring/cloudwatch_ec2_monitoring_dashboard.PNG)
 
 ## 6. RDS Monitoring
 
@@ -184,7 +184,7 @@ The RDS dashboard is separate from the EC2 dashboard because the database and ap
 
 ### Evidence: RDS Monitoring Dashboard
 
-![CloudWatch RDS monitoring dashboard showing CPU utilization, database connections, and free storage](../screenshots/cloudwatch-RDS-Monitoring_dashboard.PNG)
+![CloudWatch RDS monitoring dashboard showing CPU utilization, database connections, and free storage](monitoring/cloudwatch-RDS-Monitoring_dashboard.PNG)
 
 ## 7. CloudWatch Alarms and Notifications
 
