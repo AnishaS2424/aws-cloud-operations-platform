@@ -55,7 +55,7 @@ The application, Gunicorn backend, and Nginx web server were healthy before the 
 
 ### Baseline Evidence
 
-![Baseline screenshot showing the application health endpoint, Gunicorn service, and Nginx running](../../screenshots/incident_03/incident-03-baseline-all-systems-healthy.png)
+![Baseline screenshot showing the application health endpoint, Gunicorn service, and Nginx running](incident-03-baseline-all-systems-healthy.png)
 
 ## Failure Introduction
 
@@ -96,7 +96,7 @@ The application became unavailable while Nginx continued to run.
 
 ### Failure Evidence
 
-![Failure screenshot showing the 502 Bad Gateway response while the application service is stopped](../../screenshots/incident_03/incident-03-failure-application-service-stopped.png)
+![Failure screenshot showing the 502 Bad Gateway response while the application service is stopped](incident-03-failure-application-service-stopped.png)
 
 ## Diagnosis
 
@@ -158,7 +158,7 @@ This confirmed that the Gunicorn application service had been stopped and its wo
 
 ### Diagnosis Evidence
 
-![Diagnosis screenshot showing Nginx connection-refused errors, no process listening on port 8000, and the application service shutdown logs](../../screenshots/incident_03/incident-03-diagnosis-root-cause-identified.png)
+![Diagnosis screenshot showing Nginx connection-refused errors, no process listening on port 8000, and the application service shutdown logs](incident-03-diagnosis-root-cause-identified.png)
 
 ## Root Cause
 
@@ -233,7 +233,7 @@ The application was fully restored and accessible after restarting the applicati
 
 ### Verification Evidence
 
-![Recovery verification showing the application service running, Gunicorn listening on port 8000, a healthy health endpoint, and the application dashboard accessible](../../screenshots/incident_03/incident-03-verification-application-recovered.png)
+![Recovery verification showing the application service running, Gunicorn listening on port 8000, a healthy health endpoint, and the application dashboard accessible](incident-03-verification-application-recovered.png)
 
 ## Troubleshooting Summary
 
