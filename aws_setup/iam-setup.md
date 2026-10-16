@@ -12,6 +12,8 @@ The role is named:
 cloudops-ec2-s3-role
 ```
 
+![IAM role created for EC2](iam-setup-ec2-role-created.PNG)
+
 The role is trusted by the EC2 service, which allows an EC2 instance to assume the role and obtain temporary AWS credentials automatically.
 
 This means the application running on EC2 does not need an AWS access key or secret access key stored in its configuration.
@@ -78,6 +80,8 @@ It does not provide unrestricted access to other S3 buckets in the account.
 }
 ```
 
+![Custom S3 inline policy added to IAM role](iam-setup-inline-policy-added.PNG)
+
 ## Why the Policy Uses Two Different Resource ARNs
 
 S3 has a distinction between the bucket itself and the objects stored inside the bucket.
@@ -120,7 +124,7 @@ The application will use the EC2 IAM role when it runs on AWS, so there is no ne
 
 The application will use the bucket configured through:
 
-```dotenv
+```text
 S3_BUCKET=cloudops-bucket-01
 AWS_REGION=us-east-1
 ```
