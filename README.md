@@ -26,30 +26,7 @@ Rather than focusing only on deploying an application, the project explores the 
 
 The application runs on Amazon EC2 in a public subnet. Amazon RDS for PostgreSQL is deployed in private subnets, while Amazon S3 provides object storage for application file operations.
 
-```text
-                    User
-                      |
-                      v
-               HTTP Application
-                      |
-                      v
-                Amazon EC2
-                Flask App
-                 /      \
-                /        \
-               v          v
-       Amazon RDS       Amazon S3
-       PostgreSQL       Object Storage
-       Private Subnets
-
-                EC2 IAM Role
-                      |
-                      v
-             Temporary AWS Credentials
-
-          Amazon CloudWatch
-          Monitoring and Logs
-```
+![AWS Cloud Architecture Overview](AWS%20Cloud%20Architecture%20Overview.png)
 
 The architecture separates application hosting, database storage, and object storage. Database access is controlled through security groups, and the EC2 instance uses an IAM role for authorised S3 access.
 
